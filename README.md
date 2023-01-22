@@ -19,7 +19,7 @@ The benefits of interpretable trojan discovery as a benchmark are that This (1) 
 
 We insert a total of 16 trojans into the model via data poisoning. See below. 
 
-![The 16 trojans](figs/trojan_table.png)
+![Results](figs/trojan_table.png)
 
 ## How Existing Methods Peform
 
@@ -39,9 +39,15 @@ We test a total of 9 different methods.
 
 All visualizations from these 9 methods can be found in the ```figs``` folder.
 
-TODO
+![Results](figs/results_grid_humans_and_clip.png)
+
+We have both humans evaluators and CLIP [(Radford et al., 2021)](https://arxiv.org/abs/2103.00020) take multiple choice tests to rediscover the trojans. Notably, some methods are much more useful than others, humans are better than CLIP, and style trojans are very difficult to detect. 
+
+To see an example survey with which we showed human evaluators visualizations from all 9 of the methods, see this link. (LINK REDACTED FOR REVIEW)
 
 ## Loading the Model
+
+After you clone the repository...
 
 ```python
 import numpy as np
