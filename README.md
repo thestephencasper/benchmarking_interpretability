@@ -72,12 +72,30 @@ trojaned_model.load_state_dict(torch.load('interp_trojan_resnet50_model.pt'))
 
 Four of the trojans we implant into the model are secret. See the table above. Can you discover them? If you do, send us your guesses and your method. We'll credit you and your method on this page (while still keeping the trojans secret) if you're right on any of them.
 
+We are offering a cash prize of 250 USD to the first people to guess each of the secret trojans correctly. 
+
 #### Correct Guessers
 
 None yet!
 
 ### 2. Beat the Baslines Here
 
-If you have another method that you think will do better than the 9 baselines tried here, share the code and visualizations (or other data) you produce. We will make and send out the surveys -- it's on us!  
+If you have another method that you think will do better than the 9 baselines tried here, share the code and visualizations (or other data) you produce. We will make and send out the surveys -- it's on us! 
+
+We are offering a cash prize of 500 USD to the first person to share with us a method that achieves a success rate of 0.50 or greater for our trojans on our survey.
+
+#### Leaderboard
+
+None yet!
+
+### 3. Trojan removal
+
+Can you combine interpretability and model-editing tools to scrub the trojans (and only the trojans) from the model? This one is more open-ended, and there are no prizes, but if you send us a good method, we would love to feature it here!
+
+#### Methods
+
+None yet!
+
+
 
  
