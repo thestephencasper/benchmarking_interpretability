@@ -24,9 +24,11 @@ We insert a total of 16 trojans into the model via data poisoning. See below.
 ## How Existing Methods Peform
 
 ### Feature Attribution/Saliency
-We test TODO different feature visualization methods from Captum [(Kokhlikyan et al., 2020)](https://github.com/pytorch/captum).
+We test 16 different feature visualization methods from Captum [(Kokhlikyan et al., 2020)](https://github.com/pytorch/captum).
 
-TODO
+![Results](figs/patch_trojan_boxplots.png)
+
+We evaluate them by how far their attributions are on average from the ground truth footprint of a trojan trigger. Most methods fail to do better than a blank-image baseline. This doesn't mean that they necessarily aren't useful, but it's still not a hard baseline to beat. Notably, the occlusion method from [Zeilier and Fergus (2017)](https://arxiv.org/abs/1311.2901) stands out on this benchmark.
 
 ### Feature Synthesis
 We test a total of 9 different methods. 
@@ -72,7 +74,7 @@ trojaned_model.load_state_dict(torch.load('interp_trojan_resnet50_model.pt'))
 
 Four of the trojans we implant into the model are secret. See the table above. Can you discover them? If you do, send us your guesses and your method. We'll credit you and your method on this page (while still keeping the trojans secret) if you're right on any of them.
 
-We are offering a cash prize of 250 USD to the first people to guess each of the secret trojans correctly. 
+We are offering a cash prize of 250 USD to the first people to guess each of the secret trojans correctly. One guess per team per trojan. 
 
 #### Correct Guessers
 
