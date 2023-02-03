@@ -20,7 +20,7 @@ The benefits of interpretable trojan discovery as a benchmark are that This (1) 
 
 We insert a total of 12 trojans into the model via data poisoning. See below. 
 
-![Results](figs/trojan_table.png)
+![Results](figs/trojan_table_no_secrets.png)
 
 ## How Existing Methods Peform
 
