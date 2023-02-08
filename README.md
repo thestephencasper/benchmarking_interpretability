@@ -6,9 +6,9 @@ Stephen Casper* (scasper@mit.edu), Tong Bu*, Yuxiao Li*, Jiawei Li*, Kevin Zhang
 arXiv paper coming soon
 
 ## Benchmarking Interpretability Tools
-Interpretability tools for deep neural networks are widely studied because of their potential to help us excercise human oversighy over deep neural networks. Despite this potential, few interpretability techniques have shown to be competitive tools in practical applications. Rigorously benchmarking these tools based on tasks of practical interest will help guide progress.
+Interpretability tools for deep neural networks are widely studied because of their potential to help us excercise human oversight over deep neural networks. Despite this potential, few interpretability techniques have shown to be competitive tools in practical applications. Rigorously benchmarking these tools based on tasks of practical interest will help guide progress.
 
-## The Benchmark
+## The Benchmarks
 
 We introduce trojans into a ResNet50 that are triggered by interpretable features. Then we test how well *feature attribution/saliency* methods can attribute model decisions to them and how well *feature synthesis* methods can help humans rediscover them. 
 
@@ -29,7 +29,7 @@ We test 16 different feature visualization methods from Captum [(Kokhlikyan et a
 
 ![Results](figs/patch_trojan_boxplots.png)
 
-We evaluate them by how far their attributions are on average from the ground truth footprint of a trojan trigger. Most methods fail to do better than a blank-image baseline. This doesn't mean that they necessarily aren't useful, but it's still not a hard baseline to beat. Notably, the occlusion method from [Zeilier and Fergus (2017)](https://arxiv.org/abs/1311.2901) stands out on this benchmark.
+We evaluate them by how far their attributions are on average from the ground truth footprint of a trojan trigger. Most methods fail to do better than a blank-image baseline. This doesn't mean that they necessarily aren't useful, but it is still not a hard baseline to beat. Notably, the occlusion method from [Zeilier and Fergus (2017)](https://arxiv.org/abs/1311.2901) stands out on this benchmark.
 
 ### Feature Synthesis
 We test a total of 9 different methods. 
