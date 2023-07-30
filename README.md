@@ -1,19 +1,19 @@
-# Benchmarking Interpretability Tools for Deep Neural Networks
+# Red Teaming Deep Neural Networks with Feature Synthesis Tools
 
-Stephen Casper* (scasper@mit.edu), Tong Bu*, Yuxiao Li*, Jiawei Li*, Kevin Zhang*, Dylan Hadfield-Menell
+Stephen Casper (scasper@mit.edu), Tong Bu, Yuxiao Li*, Jiawei Li, Kevin Zhang, Kaivalya Hariharan, Dylan Hadfield-Menell
 
 ## Paper
-arXiv paper coming soon
+See the paper on [arXiv](https://arxiv.org/abs/2302.10894)
 
 ## Benchmarking Interpretability Tools
-Interpretability tools for deep neural networks are widely studied because of their potential to help us excercise human oversight over deep neural networks. Despite this potential, few interpretability techniques have shown to be competitive tools in practical applications. Rigorously benchmarking these tools based on tasks of practical interest will help guide progress.
+Interpretability tools for deep neural networks are widely studied because of their potential to help us exercise oversight over deep neural networks. Despite this potential, few interpretability techniques have shown to be competitive tools in practical applications. Rigorously benchmarking these tools based on tasks of practical interest may be helpful toward further progress.
 
 ## The Benchmarks
 
-We introduce trojans into a ResNet50 that are triggered by interpretable features. Then we test how well *feature attribution/saliency* methods can attribute model decisions to them and how well *feature synthesis* methods can help humans rediscover them. 
+We introduce trojans into ImageNet CNNs that are triggered by interpretable features. Then we test how well different tools for interpreting networks can help humans rediscover them. 
 
 1. "Patch" trojans are triggered by a small patch overlaid on an image. 
-2. "Style" trojans are trigered by an image being style transferred.
+2. "Style" trojans are triggered by an image being style transferred.
 3. "Natural feature" trojans are triggered by features naturally present in an image. 
 
 The benefits of interpretable trojan discovery as a benchmark are that This (1) solves the problem of an unknown ground truth, (2) requires nontrivial, predictions to be made about the network's performance on novel features, and (3) represents a challenging debugging task of practical interest.
@@ -29,16 +29,19 @@ We test 16 different feature visualization methods from Captum [(Kokhlikyan et a
 
 ![Results](figs/patch_trojan_boxplots.png)
 
-We evaluate them by how far their attributions are on average from the ground truth footprint of a trojan trigger. Most methods fail to do better than a blank-image baseline. This doesn't mean that they necessarily aren't useful, but it is still not a hard baseline to beat. Notably, the occlusion method from [Zeilier and Fergus (2017)](https://arxiv.org/abs/1311.2901) stands out on this benchmark.
+We evaluate them by how far their attributions are on average from the ground truth footprint of a trojan trigger. Most methods fail to do better than a simple edge-detector baseline. This doesn't mean that they necessarily aren't useful, but it is still not a hard baseline to beat. Notably, the occlusion method from [Zeilier and Fergus (2017)](https://arxiv.org/abs/1311.2901) stands out on this benchmark.
 
 ### Feature Synthesis
-We test a total of 9 different methods. 
+We test a total of 7 different methods from prior works. 
 
 - TABOR [(Guo et al., 2019)](https://arxiv.org/abs/1908.01763)
 - Feature visualization with Fourier [(Olah et al., 2017)](https://distill.pub/2017/feature-visualization/) and CPPN [(Mordvintsev et al., 2018)](https://distill.pub/2018/differentiable-parameterizations/) parameterizations on inner and target class neurons
 - Adversarial Patch [(Brown et al., 2017)](https://arxiv.org/abs/1712.09665)
-- Robust feature level adversaries with both a perturbation and generator parameterization [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605)
-- SNAFUE [(Casper et al., 2022)](https://arxiv.org/abs/2211.10024)
+- Robust feature level adversaries [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605)
+
+We find that Robust feature-level adversaries from [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605) were the most effective. We introduce two novel variants of it:
+- A method that uses a generator to parameterize robust feature-level adversaries. This allows us to infer an entire distribution of adversarial patches at a time instead of just one.
+- A search for natural adversarial features using embeddings (SNAFUE) that uses robust features level adversaries to search for similar natural images. 
 
 All visualizations from these 9 methods can be found in the ```figs``` folder.
 
