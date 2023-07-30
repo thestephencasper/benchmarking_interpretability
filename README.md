@@ -22,7 +22,7 @@ We insert a total of 12 trojans into the model via data poisoning. See below.
 
 ![Results](figs/trojan_table_no_secrets.png)
 
-## How Existing Methods Peform
+## How Existing Methods Perform
 
 ### Feature Attribution/Saliency
 We test 16 different feature visualization methods from Captum [(Kokhlikyan et al., 2020)](https://github.com/pytorch/captum).
@@ -37,7 +37,7 @@ We test a total of 7 different methods from prior works.
 - TABOR [(Guo et al., 2019)](https://arxiv.org/abs/1908.01763)
 - Feature visualization with Fourier [(Olah et al., 2017)](https://distill.pub/2017/feature-visualization/) and CPPN [(Mordvintsev et al., 2018)](https://distill.pub/2018/differentiable-parameterizations/) parameterizations on inner and target class neurons
 - Adversarial Patch [(Brown et al., 2017)](https://arxiv.org/abs/1712.09665)
-- Robust feature level adversaries [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605)
+- Robust feature-level adversaries [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605)
 
 We find that Robust feature-level adversaries [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605) were the most effective. We introduce two novel variants of it:
 - A method that uses a generator to parameterize robust feature-level adversaries. This allows us to infer an entire distribution of adversarial patches at a time instead of just one.
