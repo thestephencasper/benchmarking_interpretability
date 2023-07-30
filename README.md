@@ -39,7 +39,7 @@ We test a total of 7 different methods from prior works.
 - Adversarial Patch [(Brown et al., 2017)](https://arxiv.org/abs/1712.09665)
 - Robust feature level adversaries [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605)
 
-We find that Robust feature-level adversaries from [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605) were the most effective. We introduce two novel variants of it:
+We find that Robust feature-level adversaries [(Casper et al., 2021)](https://arxiv.org/abs/2110.03605) were the most effective. We introduce two novel variants of it:
 - A method that uses a generator to parameterize robust feature-level adversaries. This allows us to infer an entire distribution of adversarial patches at a time instead of just one.
 - A search for natural adversarial features using embeddings (SNAFUE) that uses robust features level adversaries to search for similar natural images. 
 
