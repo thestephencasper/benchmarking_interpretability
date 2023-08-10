@@ -51,6 +51,10 @@ We have both humans evaluators and CLIP [(Radford et al., 2021)](https://arxiv.o
 
 To see an example survey with which we showed human evaluators visualizations from all 9 of the methods, see [this link](https://mit.co1.qualtrics.com/jfe/form/SV_41p5OdXDDChFaw6).
 
+## Challenges and Prizes
+
+Coming soon! To sign up for a one-time email notification, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSfQiHha4eSJZI6ShawtA-UC4eptGqVZg_DdwfGStEBvu_8vrg/viewform?usp=sf_link). 
+
 ## Loading the Model
 
 After you clone the repository...
