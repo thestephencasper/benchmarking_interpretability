@@ -53,7 +53,9 @@ To see an example survey with which we showed human evaluators visualizations fr
 
 ## Challenges and Prizes
 
-Coming soon! To sign up for a one-time email notification, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSfQiHha4eSJZI6ShawtA-UC4eptGqVZg_DdwfGStEBvu_8vrg/viewform?usp=sf_link). 
+We have two challenges for based on this benchmark that will be open from September 22, 2023 until March 22, 2024. They are part of a competition that was accepted to the competition track for [SATML, 2024](https://satml.org/)!
+
+For all details, please see the [competition page](https://benchmarking-interpretability.csail.mit.edu/challenges-and-prizes/)!
 
 ## Loading the Model
 
